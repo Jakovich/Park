@@ -1,0 +1,14 @@
+//steps
+- var steps = ['Территория и время', 'Посетители', 'Проверка и оплата']
+ul.steps
+  each val, index in steps
+      if currentStep === index
+          li(class=["steps__item", "steps__item--active"])
+            button(class="steps__btn") #{val}
+      else if index > currentStep
+        li(class=["steps__item"])
+          button(class="steps__btn" disabled="true") #{val}
+      else
+          li(class=["steps__item", "steps__item--done"])
+              button(class="steps__btn") #{val}
+  

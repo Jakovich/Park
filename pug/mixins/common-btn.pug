@@ -1,0 +1,17 @@
+//step-btn
+mixin common-btn(name, addClass)
+  if addClass
+    div.common-btn
+      div(class="common-btn__wrapper common-btn__wrapper--"+addClass)
+        button(class="common-btn__submit common-btn__submit--"+addClass type="submit")= name
+        div(class=["note note--submit"])
+          p.note__title
+            | Сначала выберите маршрут
+  else
+    div.common-btn
+      div.common-btn__wrapper
+        button(class="common-btn__submit" type="submit")= name
+        div(class=["note note--submit"])
+          p.note__title
+            | Сначала выберите маршрут
+        

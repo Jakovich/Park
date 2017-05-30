@@ -1,0 +1,6 @@
+mixin select(name, label, options)
+  .form__select-wrp
+    label(for=name class="form__label-select")= label
+    select(name=name id=name data-valid=name class="form__select")
+      each val, key in options
+        option(value=key data-valid=key)= val

@@ -1,0 +1,6 @@
+mixin icon(name, sprite, iconclass)
+  svg(class=iconclass)&attributes(attributes)
+    use(xlink:href='img/sprites/' + sprite + '.svg#' + name)
+
+//- USAGE      
+//- +icon('name', 'class')

@@ -1,0 +1,13 @@
+nav.main-nav
+  .wrapper
+    .main-nav__content
+      .main-nav__logo
+        a(href="index.html"): img(src="img/logo.svg" width="169" height="44")
+      ul.main-nav__items
+        each val, key in menu
+          if pageTitle === key
+            li(class=["main-nav__item", "main-nav__item--active"])
+              a(href='#', title=key)= key
+          else
+            li(class=["main-nav__item"])
+              a(href=val, title=key)= key

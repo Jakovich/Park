@@ -1,0 +1,11 @@
+//total
+ul.total
+  each val, key in total
+      if key === 'Итого'
+          li(class=["total__item", "total__item--last"])
+            span.total__name #{key} 
+            span.total__sum #{val}      
+      else
+          li(class=["total__item"])
+            span.total__name #{key} 
+            span.total__sum #{val} 

@@ -1,0 +1,68 @@
+include ../mixins/checkbox.pug
+include ../mixins/svg-icon.pug
+table.table
+  thead
+    tr
+      th.table__route-name Остров Ольхон
+      th.table__route-descr Что интересного
+      th.table__route-type Тип
+      th.table__route-distance Расстояние
+  tbody
+    tr
+      td.table__route-name
+        +checkbox('marshr-2.1', 'Посёлок Хужир — озеро Шара-Нур — падь Ташкиней')
+      td.table__route-descr
+        | Маршрут по центральной части Ольхона, ведет на восточный берег острова к Большому Байкалу. По пути озеро с теплыми минерализованными водами и целебными грязями — Шара-Нури, и живописная падь Ташкиней.
+      td.table__route-type
+        +icon('icons_marsh-bike', 'sprite-inline-route', 'table__icon table__icon--bike')
+        +icon('icons_marsh-car', 'sprite-inline-route', 'table__icon table__icon--car')
+      td.table__route-distance
+        | 50 км
+    tr
+      td.table__route-name
+        +checkbox('marshr-2.2', 'Посёлок Хужир — падь Идиба — озеро Шара-Нур — озеро Ханхой')
+      td.table__route-descr
+        | Маршрут по центральной части Ольхона. Идиба — живописная падь, окружённая скалами, спускается к Большому Байкалу. Озеро Шара-Нур — теплое озеро с минерализованной водой. Ханхой — теплое озеро на берегу пролива Малое Море.
+      td.table__route-type
+        +icon('icons_marsh-bike', 'sprite-inline-route', 'table__icon table__icon--bike')
+        +icon('icons_marsh-car', 'sprite-inline-route', 'table__icon table__icon--car')
+      td.table__route-distance
+        | 90 км
+        span.table__note
+          |кольцевой
+    tr
+      td.table__route-name
+        +checkbox('marshr-2.3', 'Посёлок Хужир — падь Идиба — озеро Шара-Нур — озеро Ханхой')
+      td.table__route-descr
+        | Маршрут к южной оконечности Ольхона — мысу Хорин-Ирги. Живописный скалистый мыс Хорин-Ирги омывается водами двух байкальских проливов.
+      td.table__route-type
+        +icon('icons_marsh-bike', 'sprite-inline-route', 'table__icon table__icon--bike')
+        +icon('icons_marsh-car', 'sprite-inline-route', 'table__icon table__icon--car')
+      td.table__route-distance
+        | 15 км
+    tr
+      td.table__route-name
+        +checkbox('marshr-2.4', '«Север Ольхона»', 'Посёлок Хужир — Харанцы — бухта Песчаная — мыс Саган-Хушун — мыс Хобой — урочище Узуры')
+      td.table__route-descr
+        | Маршрут по северной части Ольхона, посещение самой северной точки острова — знаменитого мыса Хобой. Мысы Саган-Хушун и Хобой — высокие скалистые утесы, обрывающиеся в Байкал. С вершины мыса Хобой в ясную погоду видны оба берега Байкала. На берегу можно встретить морского тюленя Нерпу. 
+      td.table__route-type
+        +icon('icons_marsh-bike', 'sprite-inline-route', 'table__icon table__icon--bike')
+        +icon('icons_marsh-car', 'sprite-inline-route', 'table__icon table__icon--car')
+      td.table__route-distance
+        | 100 км
+        span.table__note
+          |кольцевой
+    tr
+      td.table__route-name
+        +checkbox('marshr-2.5', '«Юг Ольхона»', 'Посёлок Хужир — озеро Ханхой — залив Семисосенный — мыс Хоргой — мыс Хорин-Ирги')
+      td.table__route-descr
+        | Маршрут по южной части Ольхона к живописному скалистому мысу Хорин-Ирги. Ханхой — озеро, отделенное песчаной косой от пролива Малое Море, на косе растёт редкое реликтовое растение — черепоплодник. На мысе Хоргой сохранились развалины древней курыканской стены. 
+      td.table__route-type
+        +icon('icons_marsh-bike', 'sprite-inline-route', 'table__icon table__icon--bike')
+        +icon('icons_marsh-car', 'sprite-inline-route', 'table__icon table__icon--car')
+      td.table__route-distance
+        | 110 км
+        span.table__note
+          |кольцевой
+  
+  

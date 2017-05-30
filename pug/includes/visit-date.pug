@@ -1,0 +1,13 @@
+include ../mixins/input.pug
+.form__row
+  +input('date-from', 'Дата посещения с', 'date', 'date')
+  +input('date-to', 'Дата посещения по', 'date', 'date')
+  div(class=["note note--input"] data-valid="date-note")
+    p.note__title
+      | Посещения дольше 30 дней рассматриваем индивидуально
+    p.note__text
+      | Заполните анкету до конца и отправьте, мы напишем вам в течение суток. Обычно всем разрешаем :-)
+    
+        
+
+      

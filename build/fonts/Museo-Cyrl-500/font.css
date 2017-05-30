@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Museo-Cyrl-500';
+  src: url('Museo-Cyrl-500.eot');
+  src: url('Museo-Cyrl-500.woff2') format('woff2'),
+       url('Museo-Cyrl-500.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoCyrl-500';
+  src: url('MuseoCyrl-500.woff') format('woff'),
+       url('MuseoCyrl-500.ttf') format('truetype'),
+       url('MuseoCyrl-500.svg#MuseoCyrl-500') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

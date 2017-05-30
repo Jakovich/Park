@@ -1,0 +1,74 @@
+// В этом файле должны быть стили только для БЭМ-блока step-btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+.common-btn {
+  padding: 20px 0;
+  position: relative;
+  display: flex;
+}
+
+.common-btn__wrapper {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+}
+
+.common-btn__wrapper--rectangle {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+
+.common-btn__submit {
+  color: #ffffff;
+  background-color: @blue;
+  border: none;
+  outline: none;
+  font-weight: 900;
+  font-size: 18px;
+  height: 45px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 25px;
+  position: relative;
+  cursor: pointer;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  margin-right: 25px;
+  transition: @transition;
+  &::before {
+    right: -25px;
+    top: 0;
+    .triangle(right, 45px, 25px, @blue);
+    position: absolute;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.common-btn__submit--rectangle {
+  border-radius: 4px;
+  margin-left: 0;
+  margin-right: auto;
+  &:before {
+    display: none;
+  }
+}
+
+@keyframes error {
+  0% {transform: translateX(-80px);}
+  20% {transform: translateX(80px);}
+	60% {transform: translateX(-40px);}
+	90% {transform: translateX(20px);}
+	100% {transform: translateX(0);}
+}
+
+.common-btn__submit--error {
+	animation-name: error;
+	animation-duration: 0.3s;
+	animation-delay: 0;
+}

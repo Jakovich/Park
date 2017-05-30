@@ -1,0 +1,48 @@
+- var currentStep = 1
+- var pageTitle = "Разрешение на посещение"
+- var total = { 'Посетители': '350 ₽', 'Автомобиль': '300 ₽', 'Маломерное судно': '1200 ₽', 'Итого': '1750 ₽'};
+include mixins/step-title.pug
+include mixins/checkbox.pug
+include mixins/radio-btn.pug
+include mixins/input.pug
+include mixins/common-btn.pug
+include mixins/add-btn.pug
+doctype html
+html
+  include includes/head.pug
+  body
+    include includes/main-header.pug
+    div(class="wrapper wrapper--small")
+      //Main content
+      form(name="step-2")
+        fieldset(class="form__fieldset")
+          +stepTitle('3. Посетители')
+          include includes/table-visitor.pug
+          +addbtn('Добавить посетителя')(data-modal="visitor")
+          include includes/person-chief.pug
+        fieldset(class="form__fieldset")
+          +stepTitle('4. Кто вы')
+          div(data-tabgroup="about")
+            +radio-btn('role', 'tourist', 'Самостоятельный турист','' ,'tourist', '1')
+            +radio-btn('role', 'agency', 'Представитель агентства', 'Сможем выставить счёт для юрлица', 'agency')
+            div(class=["form__block", "form__block--small"] data-tabcontent="agency")
+              h3.form__block-title Агенство
+              span.form__block-caret
+              .form__row
+                +input('agency-name', 'Название')
+        fieldset(class="form__fieldset form__fieldset--margin")
+          +stepTitle('5. Правила')
+          include includes/rules-park.pug
+          include includes/rules-reservation.pug
+        +common-btn('Проверить и оплатить')
+      //footer
+    include includes/main-footer.pug
+    include includes/popup-visitor.pug
+    script(src="vendor/jquery/jquery.min.js")
+    script(src="scripts/common.min.js")
+  
+  
+    
+  
+
+  

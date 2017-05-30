@@ -1,0 +1,13 @@
+//payment
+include ../mixins/svg-icon.pug
+div.payment
+  .payment__content
+    .payment__text
+      | Мы принимаем:
+      +icon('payment-visa', 'sprite-inline-general', 'payment__icon payment__icon--visa')
+      +icon('payment-mc', 'sprite-inline-general', 'payment__icon payment__icon--mc')
+    button.payment__btn(type="submit") Оплатить <span>3000 &#8381;</span>
+  p.payment__exp
+    |Вы получите разрешения после оплаты. Напечатайте их или сохраните на смартфоне.
+    
+    

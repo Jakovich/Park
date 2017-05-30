@@ -1,0 +1,17 @@
+mixin input(name, placeholder, addClass, datavalid)
+  if addClass && datavalid
+    div(class="form__input-wrp form__input-wrp--"+addClass)
+      input(name=name id=name data-valid=datavalid class="form__input form__input--"+addClass)
+      label(for=name class="form__label-input")= placeholder
+  else if !addClass && datavalid
+    div.form__input-wrp
+      input(name=name id=name class="form__input" data-valid=datavalid)
+      label(for=name class="form__label-input")= placeholder
+  else if addClass && !datavalid
+    div(class="form__input-wrp form__input-wrp--"+addClass)
+      input(name=name id=name class="form__input form__input--"+addClass)
+      label(for=name class="form__label-input")= placeholder
+  else
+    div.form__input-wrp
+      input(name=name id=name class="form__input")
+      label(for=name class="form__label-input")= placeholder

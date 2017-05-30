@@ -1,0 +1,39 @@
+// В этом файле должны быть стили только для БЭМ-блока total, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.total {
+  background-color: @blue-light;
+  border-radius: 4px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  padding: 10px 30px;
+}
+
+.total__item {
+  margin-right: 25px;
+}
+
+.total__item--last {
+  margin-right: 0;
+  .total__name {
+    font-weight: 900;
+  }
+}
+
+.total__name {
+  font-size: 14px;
+  font-weigth:300px;
+  line-height: 18px;
+}
+
+
+
+.total__sum {
+  font-size: 18px;
+  font-weigth:500px;
+  display: block;
+  line-height: 22px;
+}

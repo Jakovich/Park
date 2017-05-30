@@ -1,0 +1,17 @@
+//page-nav
+ul.tab-nav
+  li.tab-nav__item
+    a(class=["tab-nav__link", "tab-nav__link--active"] href="#" data-tablink="park") 
+     img(src="img/tabs-park-logo.svg" width="118" height="124")
+  li.tab-nav__item
+    a(class=["tab-nav__link"] href="#" data-tablink="reservation") 
+     img(src="img/tabs-reservation-logo.svg" width="123" height="118")
+    div(class=["note", "note--tab"] data-tabcontent="reservation")
+      p.note__title
+        | 1. Мы индивидуально рассматриваем каждую заявку
+      p.note__text
+        | В течение суток мы рассмотрим вашу заявку и напишем вам решение.
+      p.note__title
+        | 2. Туристы посещают территорию заповедника только в сопровождении сотрудника заповедника
+      p.note__text
+        | Стоимость посещения: 300 ₽ с человека + стоимость тура с группы от 2 до 10 человек.

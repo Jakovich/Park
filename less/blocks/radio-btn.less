@@ -1,0 +1,88 @@
+// В этом файле должны быть стили только для БЭМ-блока radio-btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.radio-btn {
+  margin-bottom: 20px;
+}
+
+.radio-btn--inline {
+  margin-bottom:0;
+}
+
+.radio-btn__input {
+  display: none;
+}
+
+.radio-btn__label {
+  position: relative;
+  padding-left: 37px;
+  display: block;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    width: 18px;
+    top: -3px;
+    height: 18px;
+    border: 2px solid @gray-table;
+    border-radius: 50%;
+  }
+}
+
+.radio-btn__input:checked~.radio-btn__label {
+  &::before {
+    border-color: @blue;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+
+    top: 3px;
+    width: 10px;
+    height: 10px;
+    background-color: @blue;
+    border-radius: 50%;
+  }
+}
+
+.radio-btn__label--black {
+  border-color: @black;
+  margin-right: 25px;
+}
+
+.radio-btn__input:checked~.radio-btn__label--black {
+  &::before {
+    border-color: @black;
+  }
+  &::after {
+    background-color: @black;
+  }
+  .radio-btn__icon {
+    opacity: 1;
+  }
+}
+
+.radio-btn__title {
+  font-weight: 500;
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.radio-btn__subtitle {
+  font-size: 12px;
+  display: block;
+  max-width: 510px;
+  font-weight: 300;
+}
+
+.radio-btn__icon {
+  width: 17px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 9px;
+  opacity:0.5;
+}

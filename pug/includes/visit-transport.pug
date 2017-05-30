@@ -1,0 +1,12 @@
+include ../mixins/select.pug
+include ../mixins/input.pug
+include ../mixins/add-btn.pug
+.form__block(data-tabcontent="marsr-transport")
+  span.form__block-caret
+  h3.form__block-title Транспортные средства
+  .form__row
+    +select('type-transport', 'Тип траспортного средства', {'auto': 'Автомобиль', 'boat': 'Маломерное судно', 'snowmobile': 'Снегоход'})
+    +input('transport-number', 'Регистрационный номер')
+    +input('boat-count', 'Планируемое количество причаливаний','', 'boat-count')
+  +addbtn('Добавить транспортное средство')
+  

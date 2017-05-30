@@ -1,0 +1,18 @@
+include ../mixins/select.pug
+include ../mixins/input.pug
+div(class="form__block form__block--noborder form__block--margin")
+  h3(class="form__block-title form__block-title--nomargin") Старший группы
+  p.form__subtitle Гид, менеджер или организатор
+  .form__row
+    +input('chef-first-name', 'Фамилия')
+    +input('chef-second-name', 'Имя')
+    +input('chef-patronymic', 'Отчество')
+  .form__row
+    +input('chef-email', 'Эл. почта')
+    +input('chef-phone', 'Телефон')
+    div(class=["note note--input"])
+      p.note__title
+        | Введите и почту, и телефон
+      p.note__text
+        | На почту пришлём разрешения для всех. Позвоним, если будут срочные вопросы.
+  

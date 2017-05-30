@@ -1,0 +1,10 @@
+mixin radio-btn(name, val, text, addittext, data, checked)
+  div.radio-btn
+    if checked
+      input(name=name id=val value=val type="radio" class="radio-btn__input" data-tablink=data checked)
+    else
+      input(name=name id=val value=val type="radio" data-tablink=data class="radio-btn__input")
+    label(class="radio-btn__label" for=val)
+      span.radio-btn__title #{text}
+      if addittext
+        span.radio-btn__subtitle #{addittext}

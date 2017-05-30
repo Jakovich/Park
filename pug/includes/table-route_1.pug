@@ -1,0 +1,108 @@
+include ../mixins/checkbox.pug
+include ../mixins/svg-icon.pug
+include ../mixins/tooltip.pug
+table.table
+  thead
+    tr
+      th(class=['table__route-name', 'table__route-name--bold']) Маршрут
+      th.table__route-descr Что интересного
+      th.table__route-type Тип
+      th.table__route-distance Расстояние
+  tbody
+    tr
+      td.table__route-name
+        +checkbox('marshr-1.1', 'О. п. Темная Падь — Старая Ангасолка')
+      td.table__route-descr
+        | Короткий маршрут от действующего Транссиба до КБЖД. Популярный поход выходного дня к озеру Байкал, доступный даже неопытным туристам.
+      td.table__route-type
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-distance
+        | 3 км
+    tr
+      td.table__route-name
+        +checkbox('marshr-1.2', 'О. п. Переезд — река Большая Крутая Губа')
+      td.table__route-descr
+        | Живописный спуск к Байкалу по ущелью речки Большая Крутая Губа. Зимой здесь проложена лыжная трасса, требующая местами внимательного техничного прохождения.
+      td.table__route-type
+        +icon('icons_marsh-bike', 'sprite-inline-route', 'table__icon table__icon--bike')
+        +icon('icons_marsh-ski', 'sprite-inline-route', 'table__icon table__icon--ski')
+      td.table__route-distance
+        | 13 км
+    tr
+      td.table__route-name
+        +checkbox('marshr-1.3', 'Олхинские скальники — гора Камни Потайные')
+      td.table__route-descr
+        | Поход по горам и рекам от знаменитых Олхинских скальников к скальнику «Камни Потайные». С вершины скальника туристы любуются панорамами речных долин и гор Хамар-Дабана.
+      td.table__route-type
+        +icon('icons_marsh-bike', 'sprite-inline-route', 'table__icon table__icon--bike')
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-distance
+        | 12 км
+        +tooltip('Дистанция только по территории национального парка.')
+    tr
+      td.table__route-name
+        +checkbox('marshr-1.4', 'Посёлок Листвянка — падь Крестовая — перевал Черный — падь Черная')
+      td.table__route-descr
+        | Поход по смешанному лесу из Листвянки в падь Черную. Безопасный маршрут до Черной пади с ноября по январь, когда маршрут по обрывистому берегу рискованый из-за снега и наледей.
+      td.table__route-type
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-distance
+        | 23 км
+        +tooltip('Дистанция только по территории национального парка.')
+    tr
+      td.table__route-name
+        +checkbox('marshr-1.5', 'Посёлок Листвянка – посёлок Большие Коты — посёлок Большое Голоустное')
+      td.table__route-descr
+        | Здесь грандиозные скалистые утесы, леса, степи и много достопримечательностей. Летний маршрут, один из первых байкальских маршрутов, популярный и зрелищный.
+      td.table__route-type
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-distance
+        | 50 км
+    tr
+      td.table__route-name
+        +checkbox('marshr-1.6', 'Посёлок Большое Голоустное — река Еловая — перевал Кедровый — бухта Песчаная')
+      td.table__route-descr
+        | Горные перевалы, склоны и долины речек Приморского хребта. В завершении маршрута выход к Байкалу в бухту Песчаную. Маршрут рассчитан на подготовленных туристов.
+      td.table__route-type
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-distance
+        | 36 км
+    tr
+      td.table__route-name
+        +checkbox('marshr-1.7', 'Бухта Песчаная — посёлок Бугульдейка')
+      td.table__route-descr
+        | Маршрут по горным лесам и берегам Байкала с живописными скалами и бухтами: Бабушка, Сенная, Сухая и др. Песчаные пляжи и теплая вода подходят для купания.
+      td.table__route-type
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-distance
+        | 50 км
+    tr
+      td.table__route-name
+        +checkbox('marshr-1.8', 'Посёлок Большое Голоустное — озеро Сухое')
+      td.table__route-descr
+        | Доступный маршрут к Сухому озеру. Озеро Сухое — интересный геологический объект: чаша, периодически заполняющаяся водой. Считается местом силы.
+      td.table__route-type
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-distance
+        | 3 км
+    tr
+      td.table__route-name
+        +checkbox('marshr-1.9', 'Посёлок Большое Голоустное — падь Тарахаиха — озеро Сухое — падь Ушканья')
+      td.table__route-descr
+        | Маршрут по гребням и горным склонам Приморского хребта. Альтернативный маршрут к озеру Сухому и далее в живописную падь Ушканью на берег Байкала.
+      td.table__route-type
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-distance
+        | 12 км
+    tr
+      td.table__route-name
+        +checkbox('marshr-1.10', 'Тажеранские степи', 'Еланцы — пещера Ая — бухта Орсо — Долина Каменных Духов')
+      td.table__route-descr
+        | Маршрут по реликтовой Тажеранской степи и ее основным достопримечательностям. На маршруте обрывистые берега со скальными обнажениями, древние пещеры, скалы Долины каменных духов, флора и фауна Тажеран.
+      td.table__route-type
+        +icon('icons_marsh-bike', 'sprite-inline-route', 'table__icon table__icon--bike')
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-distance
+        | 12 км
+    
+  

@@ -1,0 +1,41 @@
+- var currentStep = 0
+- var pageTitle = "Разрешение на посещение"
+- var total = { 'Автомобиль': '300 ₽', 'Маломерное судно': '1200 ₽', 'Итого': '1750 ₽'};
+include mixins/step-title.pug
+include mixins/checkbox.pug
+include mixins/radio-btn.pug
+include mixins/common-btn.pug
+doctype html
+html
+  include includes/head.pug
+  body
+    include includes/main-header.pug
+    //Main content
+    div(class="wrapper wrapper--small")
+      form(class="form" name="step-1" action='/' method="post")
+        fieldset(class="form__fieldset")
+          +stepTitle('1. Территория')
+          div(data-tabgroup="route")
+            include includes/tab-nav.pug  
+            div(data-tabcontent="park")  
+              include includes/table-route_1.pug
+              include includes/table-route_2.pug
+            div(data-tabcontent="reservation")    
+              include includes/table-route_3.pug
+            .form__exp Свой маршрут
+            +checkbox('marshr-self', 'Свой маршрут', 'Опишите начало, промежуточные точки и конец.')
+            textarea(class="form__textarea" name="marshr-self-descr" rows="5")
+        fieldset(class="form__fieldset")
+          +stepTitle('2. Посещение')
+          include includes/visit-date.pug
+          div(data-tabgroup="marsr-type")
+            +radio-btn('marsr-type','walk','Пешком', '', 'marsr-walk', '1')
+            +radio-btn('marsr-type','transport','На транспортном средстве', 'Например, на автомобиле, снегоходе или маломерном судне. Байдарку и велосипед бесплатно, их указывать не нужно.', 'marsr-transport')
+            include includes/visit-transport.pug
+          +common-btn('Добавить посетителей')
+      //footer
+    include includes/main-footer.pug
+  script(src="vendor/jquery/jquery.min.js")
+  script(src="vendor/jquery/jquery-ui.min.js")
+  script(src="scripts/common.min.js")
+  script(src="scripts/step-1-valid.min.js")

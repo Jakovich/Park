@@ -1,0 +1,164 @@
+// В этом файле должны быть стили только для БЭМ-блока rules, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.rules {}
+
+.rules__content {
+  padding-left: 35px;
+}
+
+.rules__items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rules__item {
+    width: 245px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.rules__note {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.rules__note-text {
+  width: 645px;
+  margin-right: 170px;
+  margin-bottom: 38px;
+  .rules__text {
+    margin: 10px 0;
+  }
+}
+
+.rules__warning {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  padding: 12px 15px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  background-position: left center;
+}
+
+.rules__warning--attent {
+  background-image: url('../img/stripe-warning.svg');
+  background-repeat: no-repeat;
+  padding-left: 18px;
+  margin-left: -18px;
+  margin-bottom: 0;
+}
+
+.rules__warning--park {
+  background-image: url('../img/stripe-park.svg');
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  margin-left: -30px;
+  color: @black;
+}
+.rules__warning--reservation {
+  background-image: url('../img/stripe-reservation.svg');
+  background-repeat: no-repeat;
+  padding-left: 45px;
+  margin-left: -45px;
+}
+
+.rules__exp {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.rules__text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.rules__text-link {
+  color: @blue;
+}
+
+.rules__item {
+  .rules__text-link {
+    text-decoration: none;
+  }
+}
+
+.rules__text-light {
+  color: @gray-table;
+}
+
+.rules__img {
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.rules__icon {
+  margin-right: 55px;
+}
+
+.rules__icon--procure {
+    width: 72px;
+    height: 72px;
+}
+
+.rules__icon--camping {
+    width: 86px;
+    height: 52px;
+}
+
+.rules__icon--collect {
+    width: 50px;
+    height: 69px;
+}
+
+.rules__icon--destroy {
+    width: 52px;
+    height: 62px;
+}
+
+.rules__icon--dog {
+    width: 70px;
+    height: 60px;
+}
+.rules__icon--drive {
+    width: 76px;
+    height: 72px;
+}
+
+.rules__icon--fire {
+    width: 58px;
+    height: 68px;
+}
+
+.rules__icon--wood-fire {
+    width: 54px;
+    height: 76px;
+}
+.rules__icon--hunt {
+    width: 92px;
+    height: 92px;
+}
+
+.rules__icon--match {
+    width: 60px;
+    height: 56px;
+}
+.rules__icon--mineral {
+    width: 50px;
+    height: 70px;
+}
+.rules__icon--tools {
+    width: 73px;
+    height: 74px;
+}
+.rules__icon--worry {
+    width: 70px;
+    height: 70px;
+}

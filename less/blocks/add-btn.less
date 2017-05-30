@@ -1,0 +1,36 @@
+// В этом файле должны быть стили только для БЭМ-блока add-btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.add-btn {
+  border: 1px solid #018EAA;
+  border-radius: 2px;
+  color: @blue;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  background-color: transparent;
+  padding: 14px 30px;
+  padding-left: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: @transition;
+  &::before {
+    position: absolute;
+    content: '+';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: @blue;
+    color: #ffffff;
+    font-size: 13px;
+    left: 23px;
+    top: 50%;
+    margin-top: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}

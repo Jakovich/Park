@@ -1,0 +1,6 @@
+include svg-icon.pug
+mixin tooltip(notetext)
+  div.tooltip
+    button.tooltip__btn 
+      +icon('info', 'sprite-inline-general', 'tooltip__icon')    
+    div.tooltip__body= notetext

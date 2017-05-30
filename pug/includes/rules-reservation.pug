@@ -1,0 +1,38 @@
+include ../mixins/rules-item.pug
+//rules
+div.rules
+  .rules__content
+    p.rules__text
+      | Задача заповедника – гарантия сохранения популяций особо охраняемых видов животных и растений Прибайкалья, генетический банк, хранящий всё разнообразие естественных природных сообществ. 
+      div(class=["rules__warning","rules__warning--reservation"])
+        | На территории заповедника запрещено:
+    .rules__items
+      +rules-item('tools', 'охотиться, рыбачить и находиться с орудиями охоты или рыбалки;')
+      +rules-item('drive', 'ездить и вставать на машинах, мотоциклах, снегоходах и квадроциклах;')
+      +rules-item('procure', 'заготавливать живицу, древесину и древесные веники;')
+      +rules-item('match', 'пускать палы и выжигать растительность;')
+      +rules-item('worry', 'беспокоить и кормить диких животных;')
+      +rules-item('collect', 'собирать дикоросы, ягоды, грибы и орехи;')
+      +rules-item('mineral', 'собирать зоологические, ботанические и минералогические коллекции;')
+      +rules-item('dog', 'находиться с собаками.')
+    .rules__note
+      .rules__note-text
+        div(class=["rules__warning","rules__warning--attent"])
+          | Обратите внимание:
+        p.rules__text
+          |Пребывание на территории парка допускается только при наличии разрешения.
+        p.rules__text
+          |При режиме ЧС или высоком классе пожарной опасности посещение может быть ограничено или запрещено.
+      .rules__item
+        .rules__img
+          +icon('wood-fire', 'sprite-inline-rules',  'rules__icon rules__icon--wood-fire')
+        p.rules__exp
+          | Следите за лесными пожарами на 
+          <a class="rules__text-link" target="_blank" href="http://fires.ru">http://fires.ru</a>
+  
+  p.rules__text
+    |Пожалуйста, прочитайте <a class="rules__text-link" href="#">полные правила посещения заповедника</a> <span class="rules__text-light">(займёт 2 минуты)</span>.
+  p.rules__text
+    |Отправляя эту анкету вы принимаете правила посещения и соглашаетесь на обработку и хранение персональных данных.
+    
+    

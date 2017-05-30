@@ -1,0 +1,81 @@
+// В этом файле должны быть стили только для БЭМ-блока note, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.note {
+  position: absolute;
+  background-color: @yellow;
+  color: @black;
+  border-radius: 4px;
+  z-index: 4;
+  top: 0;
+  padding: 20px;
+  padding-bottom: 18px;
+  &::before {
+    left:-9px;
+    top: 30px;
+    .triangle(left, 20px, 10px, @yellow);
+    position: absolute;
+  }
+
+}
+
+.note--tab {
+  display: none;
+  width: 545px;
+  right: -555px;
+}
+
+.note--input {
+  width: 335px;
+  left: 595px;
+  padding-bottom: 5px;
+  &::before {
+    top: 20px;
+  }
+}
+.note--left {
+  left: 295px;
+}
+.note--up {
+  top: -20px;
+}
+.note--blue {
+  background-color: @blue;
+  color: #ffffff;
+  &::before {
+    .triangle(left, 20px, 10px, @blue);
+  }
+}
+
+.note--submit {
+  right: 10px;
+  display: none;
+  top: -90px;
+  padding: 15px 20px;
+  &::before {
+    left:15px;
+    bottom: -20px;
+    top: auto;
+    .triangle(down, 20px, 10px, @yellow);
+    position: absolute;
+  }
+}
+
+[data-valid="date-note"] {
+  display: none;
+}
+
+.note__title {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.note__text {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}

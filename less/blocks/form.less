@@ -1,0 +1,258 @@
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form__fieldset--margin {
+  margin-top: 30px;
+}
+
+.form__block {
+  border: 1px solid #E2E2E2;
+  padding: 40px;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+  margin-left: -40px;
+  margin-right: -40px;
+  position: relative;
+  background-color: #ffffff;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 33.5px;
+    height: 1px;
+    background-color: #fff;
+    left: 33px;
+    top: -1px;
+  }
+}
+
+.form__block--small {
+  padding-bottom: 20px;
+}
+
+.form__block--noborder {
+  border: none;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &::before {
+    display: none;
+  }
+}
+
+.form__block--margin {
+  margin-top: 30px;
+}
+
+
+.form__subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.form__block-title {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.form__block-title--nomargin {
+  margin-bottom: 0;
+}
+
+h3.form__block-title--popup {
+  margin-top: 0;
+}
+
+.form__exp {
+  font-size: 14px;
+  line-height: 18px;
+  color: @gray-table;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  vertical-align: bottom;
+  font-weight: 300;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 15px;
+}
+
+.form__block-caret {
+  position: absolute;
+  top: -19px;
+  left: 30px;
+  z-index:-1;
+}
+
+.form__block-caret:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:-1;
+  border-bottom: 20px solid #E2E2E2;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.form__block-caret:after {
+  content: '';
+  z-index:-1;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  border-bottom: 18.5px solid #ffffff;
+  border-left: 18.5px solid transparent;
+  border-right: 18.5px solid transparent;
+}
+
+.form__row {
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+}
+
+.from__radio-wrp {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.form__label-radio {
+  position: absolute;
+  top: 0;
+  transform: none;
+  left: 0;
+  color: @black;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.form__textarea {
+  	font-size: 18px;
+    line-height: 21px;
+    border: 1px solid #AAAAAA;
+    border-radius: @input-radius;
+    padding: 18px 15px;
+    font-family: 'Museo Cyrl', Arial, sans-serif;
+    margin: 15px 30px;
+    width: 530px;
+}
+
+
+
+.form__select-wrp,
+.form__input-wrp {
+  position: relative;
+  width: 280px;
+  margin-right: 20px;
+}
+
+.form__input-wrp {
+  background-color: @input-bg;
+}
+
+.form__input-wrp--date {
+  background-image: url('../img/calendar.svg');
+  background-repeat: no-repeat;
+  background-position: 95% 55%;
+}
+
+.form__select {
+    font-family: 'Museo Cyrl', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 15px;
+    padding-top: 25px;
+    width: 100%;
+    -webkit-appearance: none;
+    padding-right: 27px;
+    background-image: url("../img/dropdown.svg");
+    background-color: @input-bg;
+    background-repeat: no-repeat;
+    background-position: 95% 55%;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -ms-appearance: none;
+    appearance: none!important;
+    cursor: pointer;
+    outline: none;
+    border: @input-border;
+    border-radius: @input-radius;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  .form__input {
+    font-family: 'Museo Cyrl', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 15px;
+    padding-top: 25px;
+    width: 100%;
+    border: @input-border;
+    border-radius: @input-radius;
+    background-color: transparent;
+  }
+
+  .form__input--completed {
+    border-color: @input-completed;
+    &~.form__label-input {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      transform: none;
+      color: @black;
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+  }
+
+  .form__label-input {
+    position: absolute;
+    color: #AAAAAA;
+    font-size: 18px;
+    font-weight: 500;
+    left: 15px;
+    top:50%;
+    transform: translateY(-50%);
+    right: 15px;
+    transition: @transition;
+  }
+
+  .form__label-select {
+    position: absolute;
+    top: 10px;
+    transform: none;
+    left: 15px;
+    color: @black;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+
+.form__input:focus {
+    border-color: @input-completed;
+    &~.form__label-input {
+    position: absolute;
+    top: 10px;
+    transform: none;
+    left: 15px;
+    color: @black;
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+  .form__input--date {
+    padding-right: 55px;
+  }

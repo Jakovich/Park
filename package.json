@@ -1,0 +1,39 @@
+{
+  "name": "Park",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Nadia Pillard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jakovich/Park.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "2.11.1",
+    "editorconfig-tools": "^0.1.1",
+    "gulp": "3.9.1",
+    "gulp-contrib-clean": "0.0.2",
+    "gulp-contrib-copy": "^0.1.2",
+    "gulp-csso": "^2.0.0",
+    "gulp-filter": "^5.0.0",
+    "gulp-less": "^3.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-svg-sprites": "^4.1.1",
+    "gulp-svg2png": "^2.0.2",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "^2.0.1",
+    "normalize.less": "^1.0.0"
+  },
+  "engines": {
+    "node": "^5.0.0"
+  },
+  "scripts": {
+    "test": "editorconfig-tools check *",
+    "build": "gulp build",
+    "start": "npm run build && gulp show"
+  }
+}

@@ -1,0 +1,62 @@
+// В этом файле должны быть стили только для БЭМ-блока payment, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.payment {
+  margin-left: -30px;
+  width: 1000px;
+  margin-bottom: 50px;
+}
+
+.payment__text {
+  	font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.payment__content {
+  background-color: @blue-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+}
+
+.payment__btn {
+  background: #0074FF;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-size: 18px;
+  padding: 10px 40px;
+  cursor: pointer;
+  line-height: 21px;
+  transition: @transition;
+  background: linear-gradient(180deg, #0074FF 0%, #515AEC 100%);
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.payment__exp {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.payment__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.payment__icon--visa {
+  width:62px;
+  height: 20px;
+}
+
+.payment__icon--mc {
+  width:45px;
+  height: 28px;
+}

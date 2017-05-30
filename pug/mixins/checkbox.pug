@@ -1,0 +1,16 @@
+//checkbox
+mixin checkbox(name, text, addittext, addClass)
+  if addClass
+    div(class="checkbox checkbox--"+addClass)
+      input(name=name id=name type="checkbox" class="checkbox__input")
+      label(class="checkbox__label" for=name)
+        span.checkbox__title #{text}
+        if addittext
+          span.checkbox__subtitle #{addittext}
+  else
+    div.checkbox
+      input(name=name id=name type="checkbox" class="checkbox__input")
+      label(class="checkbox__label" for=name)
+        span.checkbox__title #{text}
+        if addittext
+          span.checkbox__subtitle #{addittext}

@@ -1,0 +1,27 @@
+- var currentStep = 2
+- var pageTitle = "Разрешение на посещение"
+- var total = { 'Посетители': '350 ₽', 'Автомобиль': '300 ₽', 'Маломерное судно': '1200 ₽', 'Итого': '1750 ₽'};
+include mixins/step-title.pug
+include mixins/checkbox.pug
+include mixins/radio-btn.pug
+include mixins/common-btn.pug
+doctype html
+html
+  include includes/head.pug
+  body
+    include includes/main-header.pug
+    //Main content
+    div(class="wrapper wrapper--small")
+      form(class="form" name="step-3")
+        +stepTitle('6. Услуги')
+        include includes/services.pug      
+        include includes/table-total.pug
+        include includes/payment.pug
+      //footer
+    include includes/main-footer.pug
+  
+  
+    
+  
+
+  

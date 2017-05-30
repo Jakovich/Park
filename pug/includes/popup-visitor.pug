@@ -1,0 +1,66 @@
+//popup-visitor
+include ../mixins/input.pug
+include ../mixins/select.pug
+include ../mixins/checkbox.pug
+include ../mixins/step-title.pug
+include ../mixins/svg-icon.pug
+include ../mixins/common-btn.pug
+.popup-visitor__wrp
+  .popup-visitor
+    button.popup-visitor__close(data-action="close")
+    form(class="form" name="visitor")
+        +stepTitle('Новый посетитель')
+        .form__row
+            +input('first-name', 'Фамилия')
+            +input('second-name', 'Имя')
+            +input('patronymic', 'Отчество')
+        .form__row
+            +input('date-birdth', 'Дата рождения')
+            .from__radio-wrp
+              span.form__label-radio Пол
+              div(class="radio-btn radio-btn--inline")
+                input(name='sex' id='man' value='man' type="radio" class="radio-btn__input" checked)
+                label(class="radio-btn__label radio-btn__label--black" for='man')
+                  span.radio-btn__title 
+                    +icon('man', 'sprite-inline-general', 'radio-btn__icon') 
+                    | Мужской
+              div(class="radio-btn radio-btn--inline")
+                input(name='sex' id='woman' value='woman' type="radio" class="radio-btn__input")
+                label(class="radio-btn__label radio-btn__label--black" for='woman')
+                  span.radio-btn__title 
+                    +icon('woman', 'sprite-inline-general', 'radio-btn__icon') 
+                    | Женский
+              
+        .form__row
+            +input('email', 'Эл. почта (по желанию)')
+            +input('phone', 'Телефон (по желанию)')
+        .form__row
+            +select('type-document', 'Вид документа', {'passport': 'Паспорт', 'student-doc': 'Студенческий'})
+            +input('number-doc', 'Номер документа')
+            div(class=["note note--input note--blue"])
+                p.note__title
+                    | Не забудьте взять документ с собой
+                p.note__text
+                    | Без документа разрешение недействительно
+        div(class="form__block form__block--noborder")
+            h3(class="form__block-title form__block-title--popup") Откуда вы
+            .form__row
+                +select('country', 'Страна', {'russia': 'Россия', 'armenia': 'Армения'})
+                +input('city', 'Город')
+            .form__row
+                +checkbox('irkutsk-citizen', 'Житель Иркутской области (−50%)', '', 'light')
+                div(class=["note note--input note--left note--up"])
+                    p.note__title
+                        | Возьмите с собой паспорт с пропиской в Иркутской области
+                    p.note__text
+                        | Без паспорта разрешение недействительно
+        div(class="form__block form__block--noborder")
+            h3(class="form__block-title form__block-title--popup") Льгота
+            .form__row
+                +select('exemption', 'Льгота', {'student': 'Студент, −50%', 'else': 'Что-то еще'})
+                div(class=["note note--input note--left"])
+                    p.note__title
+                        | Возьмите с собой студенческий
+                    p.note__text
+                        | Без документа разрешение недействительно
+        +common-btn('Добавить', 'rectangle', 'left')

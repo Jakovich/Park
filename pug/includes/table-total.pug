@@ -1,0 +1,65 @@
+
+include ../mixins/step-title.pug
+table(class=["table table--total"])
+  thead
+    tr
+      th(class=['table__total-name']) 
+        +stepTitle('7. Оплата')
+      th.table__total-price Сумма
+      th.table__total-count Количество
+      th.table__total-sale Скидка
+      th.table__total-sum Итого
+  tbody
+    tr
+      td.table__total-name
+        | Национальный парк
+      td.table__total-price
+        | 100 &#8381;
+      td.table__total-count
+        | ×3 
+        <span>человека</span>
+      td.table__total-sale
+      td.table__total-sum
+        | 300 &#8381;
+    tr
+      td.table__total-name
+        | Национальный парк
+      td.table__total-price
+        | 100 &#8381;
+      td.table__total-count
+        | ×1 
+        <span>человек</span>
+      td.table__total-sale
+        | 50 %
+      td.table__total-sum
+        | 50 &#8381;
+    tr
+      td.table__total-name
+        | Автомобиль
+      td.table__total-price
+        | 250 &#8381; 
+        <span>/день</span>
+      td.table__total-count
+        | ×7 
+        <span>дней</span>
+      td.table__total-sale
+      td.table__total-sum
+        | 1750 &#8381;
+    tr
+      td.table__total-name
+        | Маломерное судно
+      td.table__total-price
+        | 250 &#8381; 
+        <span>/причаливание</span>
+      td.table__total-count
+        | ×7 
+        <span>причаливаний</span>
+      td.table__total-sale
+      td.table__total-sum
+        | 1750 &#8381;
+
+    
+      
+    
+  
+  

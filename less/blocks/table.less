@@ -1,0 +1,224 @@
+// В этом файле должны быть стили только для БЭМ-блока table, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.table {
+    margin: 35px 0;
+    width: 1200px;
+    border-collapse: collapse;
+
+    td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #E2E2E2;
+        vertical-align: top;
+    }
+
+    th {
+        font-size: 14px;
+        line-height: 18px;
+        color: @gray-table;
+        text-align: left;
+        padding-top: 12px;
+        padding-bottom: 8px;
+        vertical-align: bottom;
+        font-weight: 300;
+        border-bottom: 1px solid #999A97;
+    }
+}
+
+.table {
+    th.table__route-name--bold {
+        font-weight: 900;
+        color: @black;
+        font-size: 24px;
+        line-height: 29px;
+        padding-bottom: 20px;
+    }
+}
+
+.table--visitor {
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-left: -36px;
+  tbody {
+    tr:hover {
+      background-color: @blue-light;
+      cursor: pointer;
+      .table__action svg {
+        display: inline-block;
+      }
+    }
+  }
+  td {
+    border-bottom: none;
+  }
+
+}
+
+.table--total {
+  width: 940px;
+  td {
+    padding: 25px 0;
+  }
+}
+
+//table-total
+
+.table__total-name {
+  font-weight: 900;
+  font-size: 18px;
+  width: 435px;
+  .step-title {
+    margin-bottom: 0;
+  }
+}
+
+
+.table__total-count,
+.table__total-price {
+  span {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+.table__total-sale {
+  width: 70px;
+  padding-right: 60px;
+}
+
+td.table__total-sum {
+  font-weight: 900;
+
+}
+//table-route
+.table__route-name {
+    width: 560px;
+    padding-right: 50px;
+}
+
+.table__route-descr {
+    width: 405px;
+    padding-right: 50px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 13px;
+}
+
+.table__route-type {
+    width: 125px;
+    padding-right: 40px;
+}
+
+.table__action {
+  width: 36px;
+  text-align: center;
+  svg {
+    display: none;
+  }
+}
+
+th.table__action {
+  border-bottom: none;
+}
+
+.table__route-distance {
+  padding-right: 20px;
+}
+
+//visit
+.table__visitor-info {
+  padding-right: 25px;
+}
+.table__visitor-surname {
+  font-size: 18px;
+  font-weight: 900;
+  display: block;
+}
+
+.table__visitor-name {
+  	font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+}
+
+.table__visitor-date {
+  width: 90px;
+  padding-right: 35px;
+
+}
+
+.table__visitor-sex {
+  width: 80px;
+  font-size: 18px;
+  padding-right: 35px;
+}
+
+.table__visitor-contact {
+  padding-right: 30px;
+}
+
+.table__visitor-doc {
+  min-width: 150px;
+}
+
+.table__visitor-sale {
+  padding-right: 35px;
+}
+
+.table__note {
+  display: block;
+  font-size: 10px;
+}
+
+.table__small {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.table__icon {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.table__icon-wrp {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.table__icon--car {
+    width: 30px;
+    height: 24px;
+}
+
+.table__icon--walk {
+    width: 18px;
+    height: 28px;
+}
+
+.table__icon--bike {
+    width: 29px;
+    height: 26px;
+}
+
+.table__icon--ski {
+    width: 29px;
+    height: 26px;
+}
+
+.table__icon--boat {
+    width: 30px;
+    height: 22px;
+}
+
+.table__icon--sex {
+    width: 17px;
+    height: 18px;
+}
+
+.table__icon--pencil {
+  width: 14px;
+  height: 14px;
+}

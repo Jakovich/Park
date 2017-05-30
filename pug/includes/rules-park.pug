@@ -1,0 +1,37 @@
+include ../mixins/rules-item.pug
+//rules
+div.rules
+  .rules__content
+    p.rules__text
+      | Задача национального парка — сохранить уникальную природу Прибайкалья. 
+      div(class=["rules__warning","rules__warning--park"])
+        | На территории нацпарка запрещено:
+    .rules__items
+      +rules-item('procure', 'заготавливать древесину, живицу и древесные веники;')
+      +rules-item('hunt', 'охотиться и рыбачить;')
+      +rules-item('match', 'пускать палы и выжигать растительность;')
+      +rules-item('destroy', 'повреждать растения, почву и геологические обнажения;')
+      +rules-item('drive', 'ездить и вставать на машинах, мотоциклах, снегоходах и квадроциклах вне дорог общего пользования; ')
+      +rules-item('camping', 'вставать с палаткой за пределами специально предусмотренных для этого мест;')
+      +rules-item('fire', 'разводить костры вне положенных мест.;')
+    .rules__note
+      .rules__note-text
+        div(class=["rules__warning","rules__warning--attent"])
+          | Обратите внимание:
+        p.rules__text
+          |Пребывание на территории парка допускается только при наличии разрешения.
+        p.rules__text
+          |При режиме ЧС или высоком классе пожарной опасности посещение может быть ограничено или запрещено.
+      .rules__item
+        .rules__img
+          +icon('wood-fire', 'sprite-inline-rules',  'rules__icon rules__icon--wood-fire')
+        p.rules__exp
+          | Следите за лесными пожарами на 
+          <a class="rules__text-link" target="_blank" href="http://fires.ru">http://fires.ru</a>
+  
+  p.rules__text
+    |Пожалуйста, прочитайте <a class="rules__text-link" href="#">полные правила посещения нацпарка</a> <span class="rules__text-light">(займёт 2 минуты)</span>.
+  p.rules__text
+    |Отправляя эту анкету вы принимаете правила посещения и соглашаетесь на обработку и хранение персональных данных.
+    
+    

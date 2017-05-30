@@ -1,0 +1,60 @@
+include ../mixins/checkbox.pug
+include ../mixins/svg-icon.pug
+table.table
+  thead
+    tr
+      th(class=['table__route-name', 'table__route-name--bold']) Маршрут
+      th.table__route-descr Что интересного
+      th.table__route-distance Расстояние
+      th.table__route-type Тип
+      th.table__route-price Стоимость
+  tbody
+    tr
+      td.table__route-name
+        +checkbox('marshr-3.1', 'Знакомство с заповедным берегом')
+      td.table__route-descr
+        | Маршрут проходит вне территории заповедника по акватории Байкала, вдоль заповедного берега, известного также как Берег бурых медведей, где в летний период можно наблюдать за медведем.
+      td.table__route-distance
+        | 105 км
+        span.table__note
+          |1—7 дней
+      td.table__route-type
+        +icon('icons_marsh-boat', 'sprite-inline-route', 'table__icon table__icon--boat')
+        div.table__icon-wrp
+          +icon('icons_marsh-car', 'sprite-inline-route', 'table__icon table__icon--car')
+          span.table__note
+            |по льду
+      td.table__route-price
+        | 3000 &#8381;
+    tr
+      td.table__route-name
+        +checkbox('marshr-3.2', 'Кордон Онхолой — мыс Рытый')
+      td.table__route-descr
+        | Маршрут по территории заповедника вдоль берега Байкала, от мыса Онхолой до одного из самых сакральных мест Прибайкалья — мыса Рытого.
+      td.table__route-distance
+        | 15 км
+        span.table__note
+          |1 день
+      td.table__route-type
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-price
+        | 5000 &#8381;
+    tr
+      td.table__route-name
+        +checkbox('marshr-3.3', 'Сплав по реке Лена')
+      td.table__route-descr
+        | На протяжении всего маршрута гарантированы наблюдения за действительно девственной природой. Часты встречи с околоводными птицами, можно увидеть редкие виды — скопа, черный аист, орлан-белохвост. На берегах многочисленны следы животных. На протяжении всего маршрута запрещена любая природопользовательская деятельность. Маршрут проходится в сопровождении сотрудника «Заповедного Прибайкалья».
+      td.table__route-distance
+        | 270 км
+        span.table__note
+          |10 дней
+      td.table__route-type
+        +icon('icons_marsh-boat', 'sprite-inline-route', 'table__icon table__icon--boat')
+        +icon('icons_marsh-walk', 'sprite-inline-route', 'table__icon table__icon--walk')
+      td.table__route-price
+        | 50 000 &#8381;
+
+      
+    
+  
+  

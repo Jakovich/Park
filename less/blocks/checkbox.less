@@ -1,0 +1,58 @@
+// В этом файле должны быть стили только для БЭМ-блока checkbox, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.checkbox {
+
+}
+
+.checkbox__input {
+  display: none;
+}
+
+
+
+.checkbox__label {
+  position: relative;
+  padding-left: 30px;
+  display: block;
+  &::before {
+    content: '';
+    position: absolute;
+    text-align: center;
+    left: 0;
+    cursor: pointer;
+    width: 18px;
+    color: #ffffff;
+    height: 18px;
+    border: @input-border;
+    border-radius: 2px;
+  }
+}
+.checkbox__input:checked~.checkbox__label {
+  &::before {
+    background-color: @blue;
+    content: '✓';
+    font-size: 18px;
+    border-color:@blue;
+  }
+}
+
+.checkbox__title {
+  font-weight: 900;
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.checkbox__subtitle {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+.checkbox--light {
+  width: 270px;
+  .checkbox__title {
+    font-weight: 500;
+  }
+}

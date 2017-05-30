@@ -1,0 +1,6 @@
+include svg-icon.pug
+mixin rules-item(name, text)
+  .rules__item
+    .rules__img
+      +icon(name, 'sprite-inline-rules',  'rules__icon rules__icon--'+name)
+    p.rules__exp= text

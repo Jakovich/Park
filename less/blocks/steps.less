@@ -1,0 +1,138 @@
+.steps {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.steps__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  &::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    background-color: #e2e2e2;
+    width: 160px;
+    top: 4px;
+    right: 50%;
+    margin-right: 18px;
+  }
+  &:nth-child(1) {
+    width: 210px;
+
+    &::after {
+      display: none;
+    }
+  }
+  &:nth-child(2) {
+    width: 115px;
+    &::after {
+      width: 170px;
+    }
+  }
+  &:nth-child(3) {
+    width: 190px;
+  }
+}
+
+.steps__btn {
+  background: none;
+  border:none;
+  cursor: pointer;
+  position: relative;
+  padding-top: 15px;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    border: 1px solid @gray-step;
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+  }
+
+
+}
+
+
+.steps__btn[disabled='true'] {
+  cursor: text;
+}
+
+.steps__item--active {
+  &::after {
+    background-color: @black;
+  }
+  .steps__btn {
+    font-weight: 900;
+    font-size: 18px;
+    &::before {
+      border: none;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: @black;
+    }
+    &::after {
+      border: 1px solid @black;
+      position: absolute;
+      left: 50%;
+      top: -4.5px;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      content: '';
+    }
+  }
+}
+
+.steps__item--done {
+  &::after {
+    background-color: @black;
+  }
+  .steps__btn {
+    color: @blue;
+    font-weight: 900;
+    font-size: 18px;
+    transition: @transition;
+    &::before {
+      border: none;
+      background-color: @blue;
+      transition: @transition;
+      width: 9px;
+      height: 9px;
+    }
+    &:hover {
+      color: @black;
+      &::before {
+        border: none;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: @black;
+      }
+      &::after {
+        border: 1px solid @black;
+        position: absolute;
+        left: 50%;
+        top: -4.5px;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        content: '';
+      }
+    }
+  }
+}

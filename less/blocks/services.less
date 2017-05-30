@@ -1,0 +1,49 @@
+// В этом файле должны быть стили только для БЭМ-блока services, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.services {
+
+}
+
+.services__contacts {
+  display: flex;
+  align-items: baseline;
+}
+
+.services__contact {
+
+  margin-left: 30px;
+  a {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 900;
+    color: @blue;
+    text-decoration: none;
+    transition: @transition;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  span {
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+  }
+}
+
+.services__ext-link {
+  font-size: 18px;
+  line-height: 21px;
+  color: @blue;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #018EAA;
+  padding: 15px 28px;
+  border-radius: 2px;
+  transition: @transition;
+  &:hover {
+    opacity: 0.8;
+  }
+}
