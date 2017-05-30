@@ -6,5 +6,6 @@ Thumbs.db
 *.ai
 pixel_perfect/
 maket/
+build/
 
 bower_components/
